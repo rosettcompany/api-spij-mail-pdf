@@ -1,4 +1,4 @@
-package com.spijemailpdf;
+package com.spij.email.pdf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,15 +8,15 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = { "com.*" })
-public class SPIJMailApplication extends SpringBootServletInitializer
+public class SpijMailApplication extends SpringBootServletInitializer
 {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SPIJMailApplication.class, args);
+		SpringApplication.run(SpijMailApplication.class, args);
 	}
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(SPIJMailApplication.class);
+		return builder.sources(SpijMailApplication.class);
 	}
 	
 	

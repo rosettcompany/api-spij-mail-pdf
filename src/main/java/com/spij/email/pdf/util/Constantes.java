@@ -1,4 +1,4 @@
-package com.spijemailpdf.util;
+package com.spij.email.pdf.util;
 
 
 public class Constantes {

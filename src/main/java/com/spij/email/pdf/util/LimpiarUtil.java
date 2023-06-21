@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.spijemailpdf.util;
+package com.spij.email.pdf.util;
 
 
 import java.util.List;

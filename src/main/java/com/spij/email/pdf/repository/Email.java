@@ -1,4 +1,4 @@
-package com.spijemailpdf.repository;
+package com.spij.email.pdf.repository;
 
 public class Email {
 

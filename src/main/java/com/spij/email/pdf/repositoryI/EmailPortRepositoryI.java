@@ -1,7 +1,7 @@
-package com.spijemailpdf.repositoryI;
+package com.spij.email.pdf.repositoryI;
 
 import com.lowagie.text.DocumentException;
-import com.spijemailpdf.repository.Email;
+import com.spij.email.pdf.repository.Email;
 
 import java.io.IOException;
 

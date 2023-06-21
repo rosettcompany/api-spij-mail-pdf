@@ -1,4 +1,4 @@
-package com.spijemailpdf.controller;
+package com.spij.email.pdf.controller;
 
 import java.io.IOException;
 
@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lowagie.text.DocumentException;
-import com.spijemailpdf.repository.Email;
-import com.spijemailpdf.repositoryI.EmailPortRepositoryI;
+import com.spij.email.pdf.repository.Email;
+import com.spij.email.pdf.repositoryI.EmailPortRepositoryI;
 
 
 @RestController
 @CrossOrigin(origins="*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT })
 @RequestMapping("/spij-ext-email-pdf")
-public class SPIJMailController {
+public class SpijMailController {
 	
 	@Autowired
 	private EmailPortRepositoryI emailPortRepositoryI;

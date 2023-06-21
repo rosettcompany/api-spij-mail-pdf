@@ -1,4 +1,4 @@
-package com.spijemailpdf.service;
+package com.spij.email.pdf.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -6,13 +6,14 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 import com.lowagie.text.DocumentException;
-import com.spijemailpdf.util.LimpiarUtil;
-import com.spijemailpdf.repository.Email;
-import com.spijemailpdf.repositoryI.EmailPortRepositoryI;
+import com.spij.email.pdf.repository.Email;
+import com.spij.email.pdf.repositoryI.EmailPortRepositoryI;
+import com.spij.email.pdf.util.LimpiarUtil;
 
 import org.xhtmlrenderer.pdf.ITextRenderer;
 
 import javax.mail.MessagingException;
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -30,7 +31,9 @@ public class EmailService implements EmailPortRepositoryI {
     public boolean sendEmail(Email email) throws MessagingException, IOException, DocumentException {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
-
+        
+        message.setFrom(new InternetAddress("consultas.spij@minjus.gob.pe"));
+        
         helper.setTo(email.gettoEmail());
         helper.setSubject(email.getSubject());
         //helper.setText(email.getSubject(), true);
