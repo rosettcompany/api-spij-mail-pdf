@@ -32,7 +32,7 @@ public class EmailService implements EmailPortRepositoryI {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
         
-        message.setFrom(new InternetAddress("consultas.spij@minjus.gob.pe"));
+        message.setFrom(new InternetAddress("consulta.spij@minjus.gob.pe"));
         
         helper.setTo(email.gettoEmail());
         helper.setSubject(email.getSubject());
